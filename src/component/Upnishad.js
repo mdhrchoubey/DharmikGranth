@@ -1,4 +1,4 @@
-import image from "../images/granth.jpg";
+import image from "../images/upnishad.jpg";
 import { addData } from "../slice/productSlice";
 import { useSelector,useDispatch } from "react-redux";
 // import { FaArrowLeft } from "react-icons/fa";
@@ -32,9 +32,9 @@ const interval = 3000;
 
 const proans=product.map((key)=>{
 const g= key.id
-for (let i=g; i<=8; i++) {
+for (let i=g; i<=12; i++) {
 
-if(g>=5){
+if(g>=9){
 
     return(
 <>
@@ -68,7 +68,7 @@ return(
 <>
 <div className="vedas">
     <div className="ved">उपनिषद </div><br/><br/>
-    <div className="vedinfo" >हिंदू धर्म के पवित्र ग्रन्थों को दो भागों में बाँटा गया है- श्रुति और स्मृति। <br/> श्रुति हिन्दू धर्म के सर्वोच्च ग्रन्थ हैं, जो पूर्णत: अपरिवर्तनीय हैं, अर्थात् किसी <br/> भी युग में इनमे कोई  बदलाव नहीं किया जा सकता। स्मृति ग्रन्थों <br/> में देश-कालानुसार बदलाव हो सकता है। </div>
+    <div className="vedinfo" >उपनिषद् हिन्दू धर्म के महत्त्वपूर्ण श्रुति धर्मग्रन्थ हैं। <br/> ये वैदिक वाङ्मय के अभिन्न भाग हैं <br/> हर एक उपनिषद किसी न किसी वेद से जुड़ा हुआ है। <br/> इनकी संख्या लगभग १०८ है, किन्तु मुख्य उपनिषद १३ हैं</div>
     <br/>
 </div>
 <div >
@@ -98,7 +98,12 @@ return(
     {proans}
     </div>
 </div>
-<img className="vedimg" src={image} />
+<img className="vedimg" src={image} width="490px" />
+<div className="compliment">
+            <h3>आपके सुझाब हमे बहतर बनने के लिए प्रेरित करते है</h3> 
+            <textarea style={{width:"380px", height:"100px", backgroundColor:"rgba(255, 136, 0, 0.064)", border:"2px solid black", borderRadius:"30px 30px 0px 30px"}}></textarea><br/><br />
+            <button >Submit</button>
+        </div>
 
 
 </>

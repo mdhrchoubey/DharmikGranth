@@ -7,6 +7,7 @@ import Upnishad from "./component/Upnishad";
 import Granth from "./component/Granth";
 import Puran from "./component/Puran";
 import Cart from "./component/cart";
+import Buynow from "./payment/buynow";
 
 
 const App=()=>{
@@ -24,7 +25,10 @@ const App=()=>{
         <Route path="upnishad" element={<Upnishad/>}/>
         <Route path="granth" element={<Granth/>}/>
         <Route path="puran" element={<Puran/>}/>
-        <Route path="cartdisplay" element={<Cart/>} />
+        <Route path="cartdisplay" element={<Cart/>}/>
+        <Route path="buynow/" element={<Buynow/>}/>
+        <Route path="homeee" element={<Veda/>}/>
+
         </Route>
       </Routes>
       </BrowserRouter>

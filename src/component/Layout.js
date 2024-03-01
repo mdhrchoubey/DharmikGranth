@@ -17,12 +17,11 @@ const Layout=()=>{
         </div>
         <div className="nav">
             
-            <div className="home"><img src={om} style={{width:"30px"}} /></div>
+            <Link to="homeee"><div className="home"><img src={om} style={{width:"30px"}} /></div></Link>    
             <div className="navbarmain">
             <Link className="link" to="veda">वेद </Link>
             <Link className="link" to="granth">ग्रंथ </Link>
             <Link className="link" to="upnishad">उपनिषद </Link>
-            {/* <Link className="link" to="puran">पुराण </Link> */}
             <Link className="link" to="ramayan">रामायण </Link>
             <Link className="link" to="mahabharat">महाभारत  </Link>
             </div>
@@ -37,7 +36,9 @@ const Layout=()=>{
             <Outlet />
         </div>
         <div className="foot">
-            <h3>जय श्री राम</h3> 
+            <h3>हमसे बात करने के लिए मेल करें</h3>
+            <h3 className="raam">जय श्री राम</h3> 
+            <h3>dharmikgranth@gmail.com</h3>
         </div>
         </>
     )

@@ -2,6 +2,8 @@ body{
     background-image: url(../images/pattern-chakras-alt-color.jpg);
     background-repeat: repeat;
     background-position: left top;    
+    background-color: rgba(255, 136, 0, 0.347);
+
 }
 .header{
     display: flex;
@@ -36,9 +38,15 @@ body{
     font-weight: 700;
     
 }
+.nav .link:hover{
+    scale: 1.2;
+    transition: linear 0.3s;
+    -webkit-text-fill-color: brown;
+    cursor: pointer;
+}
 .content{
     width: 100%;
-    height: 1000px;
+    height: auto;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 136, 0, 0.347);
@@ -49,9 +57,23 @@ body{
     font-weight: 800;
     font-size: 40px;
 }
-/* .foot{
-    background-color: rgba(255, 136, 0, 0.347);
-} */
+.foot{
+    background-color: white;
+    border: 1px solid white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+
+}
+.raam:hover{
+    scale: 2.2;
+    transition: linear 0.3s;
+    -webkit-text-fill-color: brown;
+    cursor: pointer;
+}
 
 /* ==================VEDA=========================================== */
 
@@ -170,7 +192,10 @@ body{
 .home{
     margin-left: 100px;
     margin-top: 5px;
+    overflow: hidden;
+    z-index: -2;
 }
+
 .carttt{
     width: 70px;
     margin-top: 8px;
@@ -216,3 +241,148 @@ body{
     text-align: center;
     font-size: 20px;
 }
+.cartbody{
+    height: auto;
+    background-color: rgba(255, 136, 0, 0.064);
+}
+
+.compliment{
+    text-align: center;
+    top: 1000px;
+    margin-left: 500px;
+    position: absolute;
+}
+
+/* ===================================card detail============================================ */
+
+.buynowSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+  
+.add{
+    width: 600px;
+    border: 1px solid black;
+    text-align: left;
+    padding: 20px;
+    height: 600px;
+    display: inline;
+}
+.paymentsection{
+    width: 600px;
+    border: 1px solid black;
+    text-align: left;
+    padding: 20px;
+    height: 600px;
+    display: inline;
+    /* display: none; */
+}
+.add button{
+    font-size: 15px;
+    margin-left: 200px;
+    padding: 5px;
+    width: 70px;
+}
+
+
+/* jdfadkjfhakdjhfakdjhfkadjhfkahfakdjfhakdfhkadjfhkafhkadfhadkjf */
+.visa-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 320px;
+    height: 180px;
+    background-image: radial-gradient(
+      circle 897px at 9% 80.3%,
+      rgba(55, 60, 245, 1) 0%,
+      rgba(234, 161, 15, 0.9) 100.2%
+    );
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    gap: 15px;
+    margin-left: 150px;
+    margin-top: 50px;
+  }
+  .logoContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 18px;
+  }
+  .svgLogo {
+    height: 40px;
+    width: auto;
+  }
+  .inputstyle::placeholder {
+    color: #ffffff;
+  }
+  .inputstyle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    caret-color: red;
+    font-size: 13px;
+    height: 25px;
+    letter-spacing: 1.5px;
+  }
+  .number-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  #cardNumber {
+    width: 100%;
+    height: 25px;
+  }
+  .name-date-cvv-container {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    gap: 10px;
+  }
+  .name-wrapper {
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .expiry-wrapper,
+  .cvv-wrapper {
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .cvv-wrapper {
+    width: 10%;
+  }
+  #expiry,
+  #cvv {
+    width: 100%;
+  }
+  .input-label {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: #e2e2e2;
+    width: 100%;
+  }
+  .cardhead{
+    margin-left: 220px;
+  }
+  .btn{
+    margin-left: 300px;
+    width: 80px;
+    font-size: 16px;
+  }

@@ -3,15 +3,16 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import {itemIncreMent, itemDecreMent} from "../slice/productSlice"
 import { removeItem } from "../slice/productSlice";
+import Buynow from "../payment/buynow";
+import { Link } from "react-router-dom";
 
 
 
 
 const Cart=()=>{
 
-    const handleSubmit= (e)=>{
-        e.preventDefault();
-        alert(" ok")
+    const handleSubmit= ()=>{
+        <Buynow/>
     };
     
 
@@ -73,16 +74,18 @@ const Cart=()=>{
 
     return(
         <>
+        <div className="cartbody">
         <br />
         <div className="container">
             <h2>आपके द्वारा चुनी गई पुस्तकों का विवरण </h2>
         </div>
         <div className="cartmenu">
             <table width="80%" align="center" border="2px solid black">
-                <tr align="center" border="1px solid black">
+                <tr align="center" border="1px solid black" >
                     <td> </td>
-                    <td> Book Name</td>
+                    
                     <td> Discription</td>
+                    <td> Book Name</td>
                     <td> Price</td>
                     <td> Quantity</td>
                     <td> Total</td>
@@ -110,12 +113,19 @@ const Cart=()=>{
         <div className="checkout-btn">
            
             विक्रय हेतु आगे बड़े  |&nbsp; &nbsp;
-            <button onClick={handleSubmit}>Place Order</button>
+
+            <Link to={"/buynow/"} >
+            <button> buyNow</button>
+            </Link>
+
+            
             <br/><br/><br/>
             
-            <a href="http://localhost:3000/veda">Continue Shopping</a><br/>&nbsp;&nbsp;
+            
            
         </div>
+        </div>
+        
         </>
      );
  }

@@ -100,6 +100,11 @@ const g= key.id
             </div>
         </div>
         <img className="vedimg" src={image} />
+        <div className="compliment">
+            <h3>आपके सुझाब हमे बहतर बनने के लिए प्रेरित करते है</h3>
+            <textarea style={{width:"380px", height:"100px", backgroundColor:"rgba(255, 136, 0, 0.064)", border:"2px solid black", borderRadius:"30px 30px 0px 30px"}}></textarea><br/><br />
+            <button >Submit</button>
+        </div>
         
         
         </>
