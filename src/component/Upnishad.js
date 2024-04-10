@@ -44,7 +44,8 @@ if(g>=9){
 
 <div className="cart1">
         <div className="name">{key.name} </div>
-        <div><img src={key.image} style={{width:"120px", height:"184px"}} /></div>
+        <div><img className="cartimage" src={key.image} style={{width:"120px", height:"184px"}} /></div>
+        {/* <div className="price">{key.nam}</div> */}
         <div className="detail">{key.detail}</div>
         <div className="price">मूल्य : {key.price}</div>
         <button className="buton" onClick={()=>{mydataAdd(key.id, key.detail, key.name, key.image, key.price, key.quantity)}} >Add TO Cart</button>
@@ -99,11 +100,7 @@ return(
     </div>
 </div>
 <img className="vedimg" src={image} width="490px" />
-<div className="compliment">
-            <h3>आपके सुझाब हमे बहतर बनने के लिए प्रेरित करते है</h3> 
-            <textarea style={{width:"380px", height:"100px", backgroundColor:"rgba(255, 136, 0, 0.064)", border:"2px solid black", borderRadius:"30px 30px 0px 30px"}}></textarea><br/><br />
-            <button >Submit</button>
-        </div>
+
 
 
 </>

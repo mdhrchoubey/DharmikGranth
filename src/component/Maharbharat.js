@@ -1,3 +1,4 @@
+
 import image from "../images/upnishad.jpg";
 import { addData } from "../slice/productSlice";
 import { useSelector,useDispatch } from "react-redux";
@@ -5,6 +6,8 @@ import { useSelector,useDispatch } from "react-redux";
 // import { FaArrowRight } from "react-icons/fa";
 import product from "./product";
 import Shlok from "./shlok";
+import image1 from "../images/Vedas.jpeg";
+import image2 from "../images/granth.jpg";
 
 
 const Maharabhart=()=>    
@@ -30,35 +33,34 @@ const texts = ['कर्मण्येवाधिकारस्ते मा
 const interval = 3000;
 
 const proans=product.map((key)=>{
-const g= key.id
-for (let i=g; i<=12; i++) {
 
-if(g>=9){
 
     return(
 <>
 
     
 
-
-<div className="cart1">
-        <div className="name">{key.name} </div>
-        <div><img src={key.image} style={{width:"120px", height:"184px"}} /></div>
-        <div className="detail">{key.detail}</div>
-        <div className="price">मूल्य : {key.price}</div>
-        <button className="buton" onClick={()=>{mydataAdd(key.id, key.detail, key.name, key.image, key.price, key.quantity)}} >Add TO Cart</button>
-    </div>
+<section className="listbook">
+                    <div className="cart1">
+                        <div className="name">{key.name} </div>
+                        <div><img className="cartimage" src={key.image} style={{width:"120px", height:"184px"}} /></div>
+                        {/* <div className="price">{key.nam}</div> */}
+                        <div className="detail">{key.detail}</div>
+                        <div className="price">मूल्य : {key.price}</div>
+                        <button className="buton" onClick={()=>{mydataAdd(key.id, key.detail, key.name, key.image, key.price, key.quantity)}} >Add TO Cart</button>
+                    </div>
+    </section>
 </>
 )
 
-}
+
 
 
 
 
    
         
-}
+
 
 
 })
@@ -66,8 +68,12 @@ if(g>=9){
 return(
 <>
 <div className="vedas">
-    <div className="ved">उपनिषद </div><br/><br/>
-    <div className="vedinfo" >उपनिषद् हिन्दू धर्म के महत्त्वपूर्ण श्रुति धर्मग्रन्थ हैं। <br/> ये वैदिक वाङ्मय के अभिन्न भाग हैं <br/> हर एक उपनिषद किसी न किसी वेद से जुड़ा हुआ है। <br/> इनकी संख्या लगभग १०८ है, किन्तु मुख्य उपनिषद १३ हैं</div>
+    <div className="allbook">
+    <img className="other" src={image} width="450px" />
+    <img className="other" src={image1}width="450px" />
+    <img className="other" src={image2}width="450px" />    
+    </div>
+    
     <br/>
 </div>
 <div >
@@ -93,16 +99,16 @@ return(
     </div>
     {/* <hr  color=" black"  /> */}
     {/* cart item============================================================= */}
-    <div className="cartitem">
+    <div className="cartitems">
     {proans}
     </div>
 </div>
-<img className="vedimg" src={image} width="490px" />
-<div className="compliment">
+
+{/* <div className="compliment">
             <h3>आपके सुझाब हमे बहतर बनने के लिए प्रेरित करते है</h3> 
             <textarea style={{width:"380px", height:"100px", backgroundColor:"rgba(255, 136, 0, 0.064)", border:"2px solid black", borderRadius:"30px 30px 0px 30px"}}></textarea><br/><br />
             <button >Submit</button>
-        </div>
+        </div> */}
 
 
 </>

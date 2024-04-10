@@ -3,7 +3,6 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import {itemIncreMent, itemDecreMent} from "../slice/productSlice"
 import { removeItem } from "../slice/productSlice";
-import Buynow from "../payment/buynow";
 import { Link } from "react-router-dom";
 
 
@@ -11,9 +10,7 @@ import { Link } from "react-router-dom";
 
 const Cart=()=>{
 
-    const handleSubmit= ()=>{
-        <Buynow/>
-    };
+    
     
 
     var netamount=0;

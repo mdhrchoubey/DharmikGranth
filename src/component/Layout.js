@@ -2,7 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 import { FaShoppingBag } from 'react-icons/fa';
 import om from "../images/om.gif"
 import { useSelector } from "react-redux";
-
+import { CgProfile } from "react-icons/cg";
+import dharm from "../images/gyan.png";
 
 
 
@@ -13,7 +14,23 @@ const Layout=()=>{
         <>
         <div className="header">
             <h6>Privacy policy</h6>
-            <h6>for any enqury conact us </h6>
+            <h6>for any enqury conact us : dharmikgranth@gmail.com </h6>
+        </div>
+        <div style={{backgroundColor: "rgba(255, 136, 0, 0.347)", borderTop:"1px solid black",
+        display:"flex", justifyContent:"space-evenly",
+        alignItems:"center"
+}}>
+            <h3>Profile <CgProfile/></h3>
+            <div style={{width:"580px"}}>
+                <img src={dharm} style={{width:"250px", marginLeft:"180px"}} />
+            </div>
+            <div>
+            <h3>
+                <Link to={"/login/"}>
+                Login
+                </Link>
+                </h3>
+            </div>
         </div>
         <div className="nav">
             
@@ -23,7 +40,8 @@ const Layout=()=>{
             <Link className="link" to="granth">ग्रंथ </Link>
             <Link className="link" to="upnishad">उपनिषद </Link>
             <Link className="link" to="ramayan">रामायण </Link>
-            <Link className="link" to="mahabharat">महाभारत  </Link>
+            <Link className="link" to="mahabharat">अन्य ग्रंथ </Link>
+            <Link className="link" to="search">Search </Link>
             </div>
             <Link to="cartdisplay"> <div>
              <div className="carttt" style={{cursor:"pointer"}}><FaShoppingBag />
@@ -39,6 +57,7 @@ const Layout=()=>{
             <h3>हमसे बात करने के लिए मेल करें</h3>
             <h3 className="raam">जय श्री राम</h3> 
             <h3>dharmikgranth@gmail.com</h3>
+            
         </div>
         </>
     )

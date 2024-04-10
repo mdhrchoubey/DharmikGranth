@@ -1,37 +1,10 @@
-import { useState } from "react";
-import Credit from "./creditcard";
-import Upi from "./upi";
-import Cod from "./cod";
-import Phonepe from "./phonpe";
-import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 
 
 const Buynow=()=>{
-    const mynav=useNavigate();
-    var myans="";
-    const [paymeth, setPaymeth]=useState("");
-    const myPayment=(e)=>{
-        let myval=e.target.value;
-        setPaymeth(myval);
-    }
 
-    switch(paymeth){
-        case 'Credit':  
-            myans = <Credit />  ; break;
-        case 'UPI':          
-            myans = <Upi /> ;break;
-        case 'COD':            
-            myans = <Cod /> ;break;
-        case 'Phonpay':
-            myans= <Phonepe/>
-        // default:                                  
-        //     myans = `Select Payment Method` ;                            
-    }
-
-    const pay=()=>{
-        mynav(paymeth)
-    }
     
 
     return(
@@ -61,12 +34,13 @@ const Buynow=()=>{
                                 <option value='USA'> USA </option>
                           </select><br/><br/>
                 Pincode : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type='number' name='pin' minLength='6' maxLength='6' placeholder='Pin Code' required/><br/><br/><br/>
-
-                <button onClick={pay}>Payment</button> 
-
+                <input type='number' name='pin' maxLength='6' placeholder='Pin Code' required/><br/><br/><br/>
+                <Link to={"/payment/"}>
+                <button>Payment</button> 
+                </Link>
                 
             </div>
+            </section>
 
 
 
@@ -75,24 +49,7 @@ const Buynow=()=>{
 
 
 
-        <div className="paymentsection">
-        <h1> Choose your payment method</h1>
-        
-        <form >
-          <input type='radio' id='credit' name='payment' value='Credit' onChange={myPayment}/>
-          <label htmlFor='credit'>Credit/Debit Card </label><br/><br/>
-          <input type='radio' id='upi' name='payment' value='UPI' onChange={myPayment}/>
-          <label htmlFor='upi'>UPI (Unified Payment Interface) </label><br/><br/>
-          <input type='radio' id='phonpe' name='payment' value='phonpe' onChange={myPayment}/>
-          <label htmlFor='phonepe'>Phonpe </label><br/><br/>
-          <input type='radio' id='cod' name='payment' value='COD' onChange={myPayment}/>
-          <label htmlFor='cod'>Cash On Delivery </label><br/><br/>
-          
-        </form>
-        {myans}
-
-        </div>
-        </section>
+       
         </>
     )
 }

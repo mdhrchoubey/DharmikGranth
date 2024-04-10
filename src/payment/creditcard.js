@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -71,8 +72,10 @@ const Credit=()=>{
   </div>
 </div>
 <br/><br/>
-<button className="btn" onClick={() => alert('Thank you for choosing us!')}>Submit</button>
-
+{/* <button className="btn" onClick={() => alert('Thank you for choosing us!')}>Submit</button> */}
+<Link to={"/paymentdone/"}>
+<button className="btn">Pay via CARD</button>
+</Link>
 
         
         </>

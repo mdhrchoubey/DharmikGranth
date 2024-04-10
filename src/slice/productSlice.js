@@ -47,12 +47,16 @@ removeItem:(state,action)=>{
     
 },
 
+emptyCart:(state)=>{
+    state.cart=[];
+}
+
     
     },
 });
 export default ProductSlice.reducer;
 
-export const {addData,removeItem,UpdateQuantity,itemIncreMent,itemDecreMent}=ProductSlice.actions;
+export const {addData,removeItem,UpdateQuantity,itemIncreMent,itemDecreMent, emptyCart}=ProductSlice.actions;
 
 
 
